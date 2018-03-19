@@ -8,7 +8,21 @@
 |email|string|null: false|
 
 ### Association
+- has_many :members
 - has_many :groups, through: :members
+- has_many :messages
+
+
+
+## groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, unique: true|
+
+### Association
+- has_many :members
+- has_many :users, through: :members
 - has_many :messages
 
 
@@ -23,18 +37,6 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
-
-
-
-## groupsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false, unique: true|
-
-### Association
-- has_many :users, through: :members
-- has_many :messages
 
 
 
