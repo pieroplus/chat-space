@@ -1,0 +1,43 @@
+/[TO DO] リンクは全て仮置き（rootに飛ぶ）であるため、各機能実装後に変更
+!!!
+%html
+  %head
+  %body
+    .contents
+      / 左サイドの部分テンプレート呼び出し
+      = render partial: "index"
+      // チャット機能メイン
+      .main-content
+        // チャット機能メインのヘッダー
+        .main-header
+          .group-info
+            .group-name sampleグループ
+            .members
+              %ul.members
+                Member：
+                %li.members__list
+                  テスト太郎
+                %li.members__list
+                  てすと次郎
+          .edit-btn
+            = link_to "Edit", root_path, class: "edit-btn-form"
+        // メッセージ表示機能
+        .chat-space
+          %ul.chates
+            %li.chates__list
+              %p.chates__list__user{style: "display:inline;"} test太郎
+              %p.chates__list__time{style: "display:inline;"} 2018/03/20 12:10
+              %p.chates__list__message こんにちは
+            %li.chates__list
+              %p.chates__list__user{style: "display:inline;"} てすと次郎
+              %p.chates__list__time{style: "display:inline;"} 2018/03/20 12:12
+              %p.chates__list__message お昼ご飯どうします？
+        // メッセージ送信機能
+        .input-space
+          / [TO DO] model作成後forms_forに書き換え
+          %form.post
+            .post-area
+              %input.message-area{placeholder: "type a message", type: "text"}
+                = link_to root_path, class: "icon-style-image" do
+                  %i.far.fa-image
+                = link_to "Send", root_path, class: "send-btn"

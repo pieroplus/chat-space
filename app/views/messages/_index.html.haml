@@ -1,0 +1,26 @@
+/ 左サイドの部分テンプレート
+%html
+  %head
+  %body
+    // 左サイド
+    .side-content
+      // 左サイドヘッダー
+      .side-header
+        .username test太郎
+        %ul.icons
+          %li.icons__list
+            = link_to root_path, class: "icon-style" do
+              %i.far.fa-edit
+          %li.icons__list
+            = link_to root_path, class: "icon-style" do
+              %i.fa.fa-cog
+      // グループ一覧
+      .side-group-info
+        %h2.side-group
+          = link_to "testグループ1",root_path, class: "font-style"
+        %p.side-chat
+          = link_to "こんにちは",root_path, class: "font-style"
+        %h2.side-group
+          = link_to "testグループ2", root_path, class: "font-style"
+        %p.side-chat
+          = link_to "こんばんは",root_path, class: "font-style"

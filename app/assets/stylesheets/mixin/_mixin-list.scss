@@ -1,0 +1,15 @@
+// リンク付き文字の修正
+@mixin mixin-link{
+	color: $color-white;
+	text-decoration: none;
+	border-bottom: solid 1px #330033;
+};
+
+//clearfix
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
