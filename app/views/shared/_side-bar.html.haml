@@ -2,13 +2,14 @@
 .side-bar
   // 左サイドヘッダー
   .side-header
-    .username test太郎
+    .username
+      = current_user.name
     %ul.icons
       %li.icons__list
         = link_to root_path, class: "icon-style" do
           %i.fa.fa-pencil-square-o
       %li.icons__list
-        = link_to root_path, class: "icon-style" do
+        = link_to edit_user_path(current_user), class: "icon-style" do
           %i.fa.fa-cog
   // グループ一覧
   = render partial: "shared/side-group-info"
