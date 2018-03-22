@@ -1,29 +1,29 @@
 // サイドバー部分
 .side-bar{
-	float: left;
-	height: 100%;
-	width: 300px;
-  // 左サイドヘッダー
+  float: left;
+  height: 100%;
+  width: 300px;
+  //  左サイドヘッダー
   .side-header{
-	  height: 100px;
-	  line-height: 100px;
-	  padding-left: 20px;
-	  background-color: $color-dark-ultramarine;
-	  .username{
-	  	float: left;
-	  	color: $color-white;
-	  }
-	  .icons{
-	  	float: right;
-	  	padding-right: 20px;
-	  	list-style: none;
-	  	&__list{
-	  		float: left;
-	  		.icon-style{
-	  		  padding-right: 5px;
-	  			color: $color-white;
-	  		}
-	  	}
-	  }
-	}
+    height: 100px;
+    line-height: 100px;
+    padding-left: 20px;
+    background-color: $color-dark-ultramarine;
+    .username{
+      float: left;
+      color: $color-white;
+    }
+    .icons{
+      float: right;
+      padding-right: 20px;
+      list-style: none;
+      &__list{
+        float: left;
+        .icon-style{
+          padding-right: 5px;
+          color: $color-white;
+        }
+      }
+    }
+  }
 }

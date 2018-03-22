@@ -27,5 +27,5 @@
         .post-area
           %input.message-area{placeholder: "type a message", type: "text"}
             = link_to root_path, class: "icon-style-image" do
-              %i.far.fa-image
-            = link_to "Send", root_path, class: "send-btn"
+              %i.fa.fa-picture-o
+          %input{type: "submit", value: "Send", class: "send-btn"}
