@@ -5,7 +5,7 @@
   %body
     .contents
       / 左サイドの部分テンプレート呼び出し
-      = render partial: "index"
+      = render partial: "partial-template/side-bar"
       // チャット機能メイン
       .main-content
         // チャット機能メインのヘッダー
@@ -16,25 +16,17 @@
               %ul.members
                 Member：
                 %li.members__list
-                  テスト太郎
+                  test太郎
                 %li.members__list
                   てすと次郎
           .edit-btn
             = link_to "Edit", root_path, class: "edit-btn-form"
         // メッセージ表示機能
-        .chat-space
-          %ul.chates
-            %li.chates__list
-              %p.chates__list__user{style: "display:inline;"} test太郎
-              %p.chates__list__time{style: "display:inline;"} 2018/03/20 12:10
-              %p.chates__list__message こんにちは
-            %li.chates__list
-              %p.chates__list__user{style: "display:inline;"} てすと次郎
-              %p.chates__list__time{style: "display:inline;"} 2018/03/20 12:12
-              %p.chates__list__message お昼ご飯どうします？
+        / 部分テンプレート呼び出し
+        = render partial: "partial-template/chat-space"
         // メッセージ送信機能
         .input-space
-          / [TO DO] model作成後forms_forに書き換え
+          / [TO DO] model作成後form_forに書き換え
           %form.post
             .post-area
               %input.message-area{placeholder: "type a message", type: "text"}

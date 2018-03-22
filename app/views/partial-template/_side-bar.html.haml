@@ -1,0 +1,19 @@
+// 左サイドの部分テンプレート
+%html
+  %head
+  %body
+    // 左サイド
+    .side-bar
+      // 左サイドヘッダー
+      .side-header
+        .username test太郎
+        %ul.icons
+          %li.icons__list
+            = link_to root_path, class: "icon-style" do
+              %i.far.fa-edit
+          %li.icons__list
+            = link_to root_path, class: "icon-style" do
+              %i.fa.fa-cog
+      // グループ一覧
+      = render partial: "partial-template/side-group-info"
+
