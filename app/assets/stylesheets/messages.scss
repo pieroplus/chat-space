@@ -1,0 +1,90 @@
+//メッセージ画面用
+.contents{
+  // チャット機能メイン
+  .main-content{
+  	float: right;
+  	height: 100vh;
+  	width: calc(100% - 300px);
+    // チャット機能メインのヘッダー
+    .main-header{
+    	padding: 0 40px;
+    	height: 100px;
+    	background-color: $color-white;
+    	.group-info{
+    		float: left;
+    		.group-name{
+    			font-size: 20px;
+    			color: $color-light-black;
+    			padding-top: 35px;
+    			padding-bottom: 15px;
+    		}
+    		.members{
+    			padding-right: 5px;
+    			font-size: 12px;
+    			color: $color-gray;
+    			&__list{
+    				display: inline-block;
+    			}
+    		}
+    	}
+    	.edit-btn{
+    		float: right;
+    		height: 40px;
+    		line-height: 40px;
+    		margin-top: 28px;
+    		border: 1px solid $color-light-blue;
+    		color: $color-light-blue;
+    		.edit-btn-form{
+    			padding: 0 20px;
+    			text-decoration: none;
+    			color: $color-light-blue;
+    		}
+    	}
+    }
+    // メッセージ表示機能
+    .chat-space{
+    	height: calc(100vh - 190px);
+    	padding-left: 40px;
+    	background-color: $color-white-gray;
+    }
+	  // メッセージ送信機能
+	  .input-space{
+	  	height: 90px;
+	  	background-color: $color-light-gray;
+	  	.post{
+	  		height: 50px;
+	  		padding: 20px 40px 20px;
+	  		.post-area{
+	  			height: 50px;
+	  			.message-area{
+	  				float: left;
+	  				height: 50px;
+	  				width: calc(100% - 160px);
+	  				padding-left: 10px;
+	  				border: 0px;
+	  				font-size: 16px;
+	  			}
+	  			.icon-style-image{
+	  				float:left;
+	  				line-height: 50px;
+	  				padding-right:10px;
+	  				background-color:$color-white;
+	  				font-size:20px;
+	  				color: black;
+	  			}
+	  		}
+	  		.send-btn{
+	  			float: right;
+	  			height: 50px;
+	  			padding: 0 30px;
+	  			line-height: 50px;
+	  			background-color: $color-light-blue;
+	  			text-decoration: none;
+	  			border: none;
+	  			font-size: 16px;
+	  			color: $color-white;
+	  		}
+	  	}
+	  }
+	}
+}

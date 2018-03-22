@@ -1,0 +1,31 @@
+/[TO DO] リンクは全て仮置き（rootに飛ぶ）であるため、各機能実装後に変更
+.contents
+  / 左サイドの部分テンプレート呼び出し
+  = render partial: "shared/side-bar"
+  // チャット機能メイン
+  .main-content
+    // チャット機能メインのヘッダー
+    .main-header
+      .group-info
+        .group-name sampleグループ
+        .members
+          %ul.members
+            Member：
+            %li.members__list
+              test太郎
+            %li.members__list
+              てすと次郎
+      .edit-btn
+        = link_to "Edit", root_path, class: "edit-btn-form"
+    // メッセージ表示機能
+    / 部分テンプレート呼び出し
+    = render partial: "chat-space"
+    // メッセージ送信機能
+    .input-space
+      / [TO DO] model作成後form_forに書き換え
+      %form.post
+        .post-area
+          %input.message-area{placeholder: "type a message", type: "text"}
+            = link_to root_path, class: "icon-style-image" do
+              %i.fa.fa-picture-o
+          %input{type: "submit", value: "Send", class: "send-btn"}

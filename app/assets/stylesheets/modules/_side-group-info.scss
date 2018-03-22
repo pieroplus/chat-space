@@ -1,0 +1,21 @@
+//サイドバー内のグループ情報部分
+.side-group-info{
+  height: calc(100vh - 100px);
+  padding-left: 20px;
+  background-color: $color-ultramarine;
+  .side-group{
+    padding-top: 20px;
+    font-size: 15px;
+    .font-style{
+      @include mixin-link;
+    }
+  }
+  .side-chat{
+    padding-top: 5px;
+    padding-bottom: 20px;
+    font-size: 11px;
+    .font-style{
+      @include mixin-link;
+    }
+  }
+}
