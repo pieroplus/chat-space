@@ -16,7 +16,7 @@
             %li.members__list
               てすと次郎
       .edit-btn
-        = link_to "Edit", root_path, class: "edit-btn-form"
+        = link_to "Edit", edit_group_path(params[:id]), class: "edit-btn-form"
     // メッセージ表示機能
     / 部分テンプレート呼び出し
     = render partial: "chat-space"

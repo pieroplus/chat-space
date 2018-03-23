@@ -7,4 +7,5 @@
 @import "./messages"; //メッセージ画面用sass
 @import "font-awesome"; //font-awesome
 @import "./user"; //ユーザ画面用sass
-@import "modules/_flash";
+@import "modules/_flash";//フラッシュメッセージ用sass
+@import "groups.scss";//グループ画面用sass
