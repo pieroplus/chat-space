@@ -1,10 +1,7 @@
 /サイドバー内グループ情報の部分テンプレート
 .side-group-info
-  %h2.side-group
-    = link_to "testグループ１", root_path, class: "font-style"
-  %p.side-chat
-    = link_to "こんにちは", root_path, class: "font-style"
-  %h2.side-group
-    = link_to "testグループ２", root_path, class: "font-style"
-  %p.side-chat
-    = link_to "こんばんは", root_path, class: "font-style"
+  - current_user.groups.each do |group|
+    %h2.side-group
+      = link_to "#{group.name}", root_path, class: "font-style"
+    %p.side-chat
+      = link_to "まだメッセージはありません", root_path, class: "font-style"
