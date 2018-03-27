@@ -2,6 +2,6 @@
 .side-group-info
   - current_user.groups.each do |group|
     %h2.side-group
-      = link_to "#{group.name}", root_path, class: "font-style"
+      = link_to "#{group.name}", group_messages_path(group),class: "font-style"
     %p.side-chat
-      = link_to "まだメッセージはありません", root_path, class: "font-style"
+      = link_to "#{group.show_last_message}", group_messages_path(group), class: "font-style"

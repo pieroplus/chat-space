@@ -71,19 +71,23 @@
 	  				background-color:$color-white;
 	  				font-size:20px;
 	  				color: black;
+          }
+          .display-none{
+            display: none;
+            float: left;
 	  			}
 	  		}
-	  		.send-btn{
-	  			float: right;
-	  			height: 50px;
-	  			padding: 0 30px;
-	  			line-height: 50px;
-	  			background-color: $color-light-blue;
-	  			text-decoration: none;
-	  			border: none;
-	  			font-size: 16px;
-	  			color: $color-white;
-	  		}
+      }
+	  	.send-btn{
+	  		float: right;
+	  		height: 50px;
+	  		padding: 0 30px;
+	  		line-height: 50px;
+	  		background-color: $color-light-blue;
+	  		text-decoration: none;
+	  		border: none;
+	  		font-size: 16px;
+	  		color: $color-white;
 	  	}
 	  }
 	}
