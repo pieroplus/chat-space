@@ -1,11 +1,12 @@
 // メッセージ機能の部分テンプレート
 .chat-space
   %ul.chates
+  - @messages.each do |message|
     %li.chates__list
-      %p.chates__list__user test太郎
-      %p.chates__list__time 2018/03/20 12:10
-      %p.chates__list__message こんにちは
-    %li.chates__list
-      %p.chates__list__user てすと次郎
-      %p.chates__list__time 2018/03/20 12:12
-      %p.chates__list__message お昼ご飯どうします？
+      %p.chates__list__user
+        = message.user.name
+      %p.chates__list__time
+        = message.created_at
+      %p.chates__list__message
+        = message.body
+        = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

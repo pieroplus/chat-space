@@ -7,25 +7,28 @@
     // チャット機能メインのヘッダー
     .main-header
       .group-info
-        .group-name sampleグループ
+        .group-name
+          = @group.name
         .members
           %ul.members
             Member：
             %li.members__list
-              test太郎
-            %li.members__list
-              てすと次郎
+              - @group.users.each do |user|
+                = user.name
+            / %li.members__list
+            /   てすと次郎
       .edit-btn
-        = link_to "Edit", root_path, class: "edit-btn-form"
+        = link_to "Edit", edit_group_path(@group), class: "edit-btn-form"
     // メッセージ表示機能
     / 部分テンプレート呼び出し
     = render partial: "chat-space"
     // メッセージ送信機能
-    .input-space
-      / [TO DO] model作成後form_forに書き換え
-      %form.post
-        .post-area
-          %input.message-area{placeholder: "type a message", type: "text"}
-            = link_to root_path, class: "icon-style-image" do
+    = form_for [@group, @message] do |f|
+      .input-space
+        .post
+          .post-area
+            = f.text_field :body, class: "message-area", placeholder: "type a message"
+            = f.label :image, class: "icon-style-image" do
               %i.fa.fa-picture-o
-          %input{type: "submit", value: "Send", class: "send-btn"}
+              = f.file_field :image, class: "display-none"
+            = f.submit "send", class: "send-btn"
