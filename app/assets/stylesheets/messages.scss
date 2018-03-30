@@ -46,6 +46,7 @@
     	height: calc(100vh - 190px);
     	padding-left: 40px;
     	background-color: $color-white-gray;
+        overflow: scroll; 
     }
 	  // メッセージ送信機能
 	  .input-space{
