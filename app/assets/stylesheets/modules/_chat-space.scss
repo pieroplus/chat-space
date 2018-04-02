@@ -4,7 +4,7 @@
     list-style: none;
     padding-top:46px;
     &__user{
-      padding-top:46px;
+      // padding-top:46px;
       font-size: 16px;
       font-weight: bold;
       color: $color-dark-gray;
@@ -23,7 +23,7 @@
     }
     &__image{
       padding-top: 10px;
-      padding-bottom: 46px;
+      padding-bottom: 30px;
     }
   }
 }
