@@ -6,7 +6,7 @@
         %p.chates__list__user
           = message.user.name
         %p.chates__list__time
-          = message.created_at
+          = l(message.created_at,format: :default)
         %p.chates__list__message
           = message.body
         %p.chates__list__image

@@ -5,11 +5,12 @@ $(function(){
     } else {
       var image = `""`
     }
+    var date = l(`${message.date}`,format: :default)
     var html = `<p class="chates__list__user">
                   ${message.user}
                 </p>
                 <p class="chates__list__time">
-                  ${message.date}
+                  ${date}
                 </p>
                 <p class="chates__list__message">
                   ${message.body}
