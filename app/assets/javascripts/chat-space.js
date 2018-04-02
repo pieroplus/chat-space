@@ -1,10 +1,6 @@
 $(function(){
   function buildHTML(message){
-    if (message.image != null){
-      var image = `${message.image}`
-    } else {
-      var image = `""`
-    }
+    var image = (message.image != null) ? `${message.image}` : `""`
     var html = `<p class="chates__list__user">
                   ${message.user}
                 </p>
@@ -19,7 +15,7 @@ $(function(){
                 </p>`
     return html;
   }
-  $('.post-zone').on('submit',function(e){
+  $('.new_message').on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this)
     var href = window.location.href

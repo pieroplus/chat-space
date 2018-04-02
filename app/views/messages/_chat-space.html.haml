@@ -3,11 +3,4 @@
   %ul.chates
     %li.chates__list
       - @messages.each do |message|
-        %p.chates__list__user
-          = message.user.name
-        %p.chates__list__time
-          = l(message.created_at,format: :default)
-        %p.chates__list__message
-          = message.body
-        %p.chates__list__image
-          = image_tag message.image.url if message.image.present?
+        = render partial: "message-zone", locals: { message: message }
