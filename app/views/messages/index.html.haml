@@ -22,7 +22,7 @@
     / 部分テンプレート呼び出し
     = render partial: "chat-space"
     // メッセージ送信機能
-    = form_for [@group, @message], html: { class: 'post-zone' }  do |f|
+    = form_for [@group, @message] do |f|
       .input-space
         .post
           .post-area
