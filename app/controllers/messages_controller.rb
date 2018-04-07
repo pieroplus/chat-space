@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
     @messages = @group.messages.includes(:user).order("created_at ASC")
     respond_to do |format|
       format.html
-      format.json
+      format.json {@new_messages = @group.messages.newMessageJadge(params[:id])}
     end
   end
 

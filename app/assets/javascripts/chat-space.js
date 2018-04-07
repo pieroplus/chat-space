@@ -24,12 +24,14 @@ $(function(){
       contentType: false,
     })
     .done(function(data){
-      // HTML作成処理呼び出し
-      var html = buildHTML(data);
-      $('.chates').append(html)
-      $('.message-area').val('')
-      $('.display-none').val('')
-      $('.chat-space').animate({scrollTop: $('.chat-space')[0].scrollHeight}, 'fast');
+      if(data.id != undefined){
+        // HTML作成処理呼び出し
+        var html = buildHTML(data);
+        $('.chates').append(html)
+        $('.message-area').val('')
+        $('.display-none').val('')
+        $('.chat-space').animate({scrollTop: $('.chat-space')[0].scrollHeight}, 'fast');
+      }
       $(".send-btn").prop("disabled", false);
     })
     .fail(function(data){
@@ -39,13 +41,12 @@ $(function(){
   });
   // 5秒ごとに自動更新処理
   function update(){
-    var href = window.location.href
     var message_id = $('.chates__id').last().text().replace(/\r?\n/g,"");
-    if (href.match(/\/groups\/\d+\/messages/)) {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
       $.ajax({
-        url: href,
+        url: window.location.href,
         type: 'GET',
-        data: {m_id: message_id},
+        data: {id: message_id},
         dataType: 'json'
       })
       .done(function(data) {
