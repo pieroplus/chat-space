@@ -40,18 +40,12 @@ $(function(){
   // 5秒ごとに自動更新処理
   function update(){
     var href = window.location.href
-    var message_id = $('.chates__id').last().text();
-    // URLよりグループID抽出
-    var urlArray = href.split("/");
-    var group_id = urlArray[4];
+    var message_id = $('.chates__id').last().text().replace(/\r?\n/g,"");
     if (href.match(/\/groups\/\d+\/messages/)) {
       $.ajax({
         url: href,
         type: 'GET',
-        data: {
-          message: {m_id: message_id,
-                    g_id: group_id}
-        },
+        data: {m_id: message_id},
         dataType: 'json'
       })
       .done(function(data) {
