@@ -1,6 +1,0 @@
-// メッセージ機能の部分テンプレート
-.chat-space
-  %ul.chates
-    %li.chates__list
-      - @messages.each do |message|
-        = render partial: "message-zone", locals: { message: message }

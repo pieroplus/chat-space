@@ -1,9 +1,0 @@
-// メッセージ表示部分の部分テンプレート
-%p.chates__list__user
-  = message.user.name
-%p.chates__list__time
-  = l(message.created_at,format: :default)
-%p.chates__list__message
-  = message.body
-%p.chates__list__image
-  = image_tag message.image.url if message.image.present?

@@ -1,29 +1,25 @@
 // メッセージ表示部分
 .chates{
-  &__list{
-    list-style: none;
-    padding-top:46px;
-    &__user{
-      // padding-top:46px;
-      font-size: 16px;
-      font-weight: bold;
-      color: $color-dark-gray;
-      display: inline;
-    }
-    &__time{
-      padding-left: 10px;
-      font-size: 12px;
-      color: $color-gray;
-      display: inline;
-    }
-    &__message{
-      padding-top: 10px;
-      font-size: 14px;
-      color: $color-dark-gray;
-    }
-    &__image{
-      padding-top: 10px;
-      padding-bottom: 30px;
-    }
+  padding-top:46px;
+  &__user{
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-dark-gray;
+    display: inline;
+  }
+  &__time{
+    padding-left: 10px;
+    font-size: 12px;
+    color: $color-gray;
+    display: inline;
+  }
+  &__message{
+    padding-top: 10px;
+    font-size: 14px;
+    color: $color-dark-gray;
+  }
+  &__image{
+    padding-top: 10px;
+    padding-bottom: 30px;
   }
 }
