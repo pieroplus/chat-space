@@ -1,4 +1,4 @@
-json.array! @new_messages do |message|
+json.array! @messages do |message|
   json.id    message.id
   json.user  message.user.name
   json.date  l(message.created_at, format: :default)

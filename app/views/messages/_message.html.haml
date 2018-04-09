@@ -1,0 +1,10 @@
+// メッセージ表示部分の部分テンプレート
+.chates{ "data-message-id": "#{message.id}"}
+  %p.chates__user
+    = message.user.name
+  %p.chates__time
+    = l(message.created_at,format: :default)
+  %p.chates__message
+    = message.body
+  %p.chates__image
+    = image_tag message.image if message.image_url.present?

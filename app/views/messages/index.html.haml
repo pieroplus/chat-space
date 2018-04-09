@@ -14,13 +14,11 @@
             %li.members__list
               - @group.users.each do |user|
                 = user.name
-            / %li.members__list
-            /   てすと次郎
       .edit-btn
         = link_to "Edit", edit_group_path(@group), class: "edit-btn-form"
     // メッセージ表示機能
-    / 部分テンプレート呼び出し
-    = render partial: "chat-space"
+    .chat-space
+      = render @messages
     // メッセージ送信機能
     = form_for [@group, @message] do |f|
       .input-space
