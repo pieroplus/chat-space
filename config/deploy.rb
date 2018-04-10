@@ -10,7 +10,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.3.1'
 
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['/Users/hiroki/.ssh/key_pem.pem']
+                  keys: ['/Users/hiroki/.ssh/chat-space.pem']
 
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
@@ -22,3 +22,4 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 end
+
